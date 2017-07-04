@@ -2,7 +2,7 @@ To learn more read the blog post and watch the video at:
 
 http://www.markrackley.net/2017/07/03/using-fullcalendar-io-and-search-to-create-a-rollup-calendar-in-sharepoint/
 
-<!--/*
+
  * SPFullCalendarRollup - Create a calendar view using FullCalendar.io and SharePoint Online Task list
  * Version 1.0 
  * @requires jQuery v1.11 or greater 
@@ -25,4 +25,4 @@ http://www.markrackley.net/2017/07/03/using-fullcalendar-io-and-search-to-create
  * Map ows_StartDate to RefinableDaet02
  * 
  */
--->
+
