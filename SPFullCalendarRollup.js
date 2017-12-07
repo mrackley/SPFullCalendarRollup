@@ -32,7 +32,7 @@
 
 <script type="text/javascript">
 
-  var PATH_TO_SITE = "https://mytenant.sharepoint.com/sites/stuff";
+  var PATH_TO_SITE = "https://yourtenant.sharepoint.com/sites/stuff";
   var TASK_LIST = "Tasks";
   var COLORS = ['#466365', '#B49A67', '#93B7BE', '#E07A5F', '#849483', '#084C61', '#DB3A34'];  
 
@@ -54,10 +54,10 @@
             startDate = start.format('YYYY-MM-DD');
             endDate = end.format('YYYY-MM-DD');
 			
-			var RESTQuery = "/_api/search/query\
-					?querytext='SPContenttype:Task PATH:"+PATH_TO_SITE+"((RefinableDate00>"+startDate+" AND RefinableDate00<"+endDate+")OR\
-					(RefinableDate00<"+startDate+" AND RefinableDate00>"+endDate+"))\
-					'&selectproperties='SiteTitle,Title,Url,AssignedTo,ID,RefinableDate02,RefinableDate01'&rowlimit=250";
+			var RESTQuery = "/_api/search/query" +
+					"?querytext='SPContenttype:Task PATH:"+PATH_TO_SITE+"((RefinableDate00>"+startDate+" AND RefinableDate00<"+endDate+")OR"+
+					"(RefinableDate00<"+startDate+" AND RefinableDate00>"+endDate+"))"+
+					"'&selectproperties='SiteTitle,Title,Url,AssignedTo,ID,RefinableDate02,RefinableDate01'&rowlimit=250";
 			
 			var opencall = $.ajax({
 		    		url: _spPageContextInfo.webAbsoluteUrl + RESTQuery,
